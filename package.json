@@ -2,7 +2,6 @@
   "name": "bs-react-simple-maps",
   "version": "0.1.0",
   "description": "BuckleScript bindings for react-simple-maps",
-  "main": "src/index.re",
   "scripts": {
     "jest": "jest",
     "test": "bsb -make-world && jest",
