@@ -1,6 +1,12 @@
 {
   "name": "bs-react-simple-maps",
+  "reason": {
+    "react-jsx": 2
+  },
   "refmt": 3,
+  "bs-dependencies": [
+    "reason-react"
+  ],
   "bs-dev-dependencies": [
     "@glennsl/bs-jest"
   ],
