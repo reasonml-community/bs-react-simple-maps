@@ -2,7 +2,7 @@
 
 [BuckleScript](https://github.com/bucklescript/bucklescript) bindings for [react-simple-maps](https://github.com/zcreativelabs/react-simple-maps)
 
-[![npm](https://img.shields.io/npm/v/bs-simple-maps.svg)](https://npmjs.org/bs-simple-maps)
+[![npm](https://img.shields.io/npm/v/bs-simple-maps.svg)](https://www.npmjs.com/package/bs-simple-maps)
 
 ## Installation
 
