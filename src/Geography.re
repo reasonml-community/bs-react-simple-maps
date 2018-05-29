@@ -4,17 +4,19 @@ type projectionT;
 external geographyClass : ReasonReact.reactClass = "Geography";
 
 [@bs.deriving abstract]
-type geographyT = {id: string};
+type geography = {id: string};
 
-[@bs.deriving abstract]
-type jsProps = {
-  cacheId: Js.undefined(int),
-  precision: float,
-  round: bool,
-  geography: Js.undefined(geographyT),
-  tabable: Js.undefined(bool),
-  projection: projectionT,
-  style: Types.style,
+module Props = {
+  [@bs.deriving abstract]
+  type jsProps = {
+    cacheId: Js.undefined(int),
+    precision: float,
+    round: bool,
+    geography: Js.undefined(geography),
+    tabable: Js.undefined(bool),
+    projection: projectionT,
+    style: Types.style,
+  };
 };
 
 let fromOption = Js.Undefined.fromOption;
@@ -33,7 +35,7 @@ let make =
   ReasonReact.wrapJsForReason(
     ~reactClass=geographyClass,
     ~props=
-      jsProps(
+      Props.jsProps(
         ~cacheId=fromOption(cacheId),
         ~precision,
         ~round,

@@ -2,7 +2,7 @@
 external composableMapClass : ReasonReact.reactClass = "ComposableMap";
 
 [@bs.deriving abstract]
-type projectionConfigT = {
+type projectionConfig = {
   [@bs.optional]
   scale: int,
   [@bs.optional]
@@ -10,17 +10,19 @@ type projectionConfigT = {
   [@bs.optional]
   yOffset: int,
   [@bs.optional]
-  rotation: array(int),
+  rotation: (float, float, float),
   [@bs.optional]
   precision: float,
 };
 
-[@bs.deriving abstract]
-type jsProps = {
-  width: int,
-  height: int,
-  projection: string,
-  projectionConfig: projectionConfigT,
+module Props = {
+  [@bs.deriving abstract]
+  type jsProps = {
+    width: int,
+    height: int,
+    projection: string,
+    projectionConfig,
+  };
 };
 
 let fromOption = Js.Nullable.fromOption;
@@ -35,6 +37,6 @@ let make =
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=composableMapClass,
-    ~props=jsProps(~width, ~height, ~projection, ~projectionConfig),
+    ~props=Props.jsProps(~width, ~height, ~projection, ~projectionConfig),
     children,
   );

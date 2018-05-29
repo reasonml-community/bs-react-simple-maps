@@ -1,13 +1,11 @@
 [@bs.module "react-simple-maps"]
 external lineClass : ReasonReact.reactClass = "Line";
 
-type coords = (float, float);
-
 [@bs.deriving abstract]
 type coordinatesT = {
-  start: coords,
+  start: Types.coords,
   [@bs.as "end"]
-  end_: coords,
+  end_: Types.coords,
 };
 
 [@bs.deriving abstract]
@@ -24,8 +22,8 @@ type jsProps = {
 
 let make =
     (
-      ~start: coords,
-      ~stop: coords,
+      ~start: Types.coords,
+      ~stop: Types.coords,
       ~tabable=true,
       ~style=Types.style(),
       ~preserveMarkerAspect=true,

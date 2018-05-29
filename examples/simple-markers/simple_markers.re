@@ -63,10 +63,10 @@ let markers = [|
 
 ReactDOMRe.renderToElementWithId(
   <ComposableMap
-    projectionConfig=(ComposableMap.projectionConfigT(~scale=800, ()))
+    projectionConfig=(ComposableMap.projectionConfig(~scale=800, ()))
     width=1000
     height=1000>
-    <ZoomableGroup center=((-60), (-25)) disablePanning=false>
+    <ZoomableGroup center=((-60.), (-25.)) disablePanning=false>
       <Geographies geography="/examples/world-50m.json">
         (
           (geographies, projection) =>

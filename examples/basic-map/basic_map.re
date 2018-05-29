@@ -1,15 +1,15 @@
 ReactDOMRe.renderToElementWithId(
   <ComposableMap
     projectionConfig=(
-      ComposableMap.projectionConfigT(
+      ComposableMap.projectionConfig(
         ~scale=205,
-        ~rotation=[|(-11), 0, 0|],
+        ~rotation=((-11.), 0., 0.),
         (),
       )
     )
     width=980
     height=551>
-    <ZoomableGroup center=(0, 20) disablePanning=false>
+    <ZoomableGroup center=(0., 20.) disablePanning=false>
       <Geographies geography="/examples/world-50m.json">
         (
           (geographies, projection) =>
