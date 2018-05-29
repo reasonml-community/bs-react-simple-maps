@@ -1,5 +1,5 @@
 {
-  "name": "bs-react-simple-maps",
+  "name": "bs-simple-maps",
   "version": "0.1.0",
   "description": "BuckleScript bindings for react-simple-maps",
   "scripts": {
@@ -19,7 +19,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/poeschko/bs-react-simple-maps.git"
+    "url": "git+https://github.com/reasonml-community/bs-react-simple-maps.git"
   },
   "dependencies": {
     "react-simple-maps": "^0.12.1"

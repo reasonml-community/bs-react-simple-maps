@@ -5,10 +5,10 @@
 ## Installation
 
 ```sh
-npm install --save bs-react-simple-maps
+npm install --save bs-simple-maps
 ```
 
-In your `bsconfig.json`, include `"bs-react-simple-maps"` in the `bs-dependencies`.
+In your `bsconfig.json`, include `"bs-simple-maps"` in the `bs-dependencies`.
 
 ## Examples
 
@@ -82,3 +82,9 @@ npm run test
 ```
 
 For now, we just test by looking at the [examples](./examples).
+
+## Thanks
+
+These bindings started as a [joint effort](https://github.com/poeschko/dojo-europe) of [Ali](https://twitter.com/sharifsbeat), [Jan](https://twitter.com/poeschko), [Patrick](https://twitter.com/ryyppy), and [Timo](https://twitter.com/defuex) at the [Reason-Dojo](https://twitter.com/search?src=typd&q=%23ReasonDojo) organized by [Ben](https://twitter.com/bsansouci) and [Sean](https://twitter.com/sgrove).
+
+Right now, there are similar (yet less complete) bindings published as [bs-react-simple-maps](https://www.npmjs.com/package/bs-react-simple-maps) maintained at [DeFuex's repo](https://github.com/defuex/bs-react-simple-maps). We will try to unify these in the future.
