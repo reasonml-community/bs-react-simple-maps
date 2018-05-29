@@ -4,14 +4,7 @@ open Types;
 external markerClass : ReasonReact.reactClass = "Marker";
 
 [@bs.deriving abstract]
-type markerT = {coordinates: (float, float)};
-
-[@bs.deriving abstract]
-type styleT = {
-  default: ReactDOMRe.Style.t,
-  hover: ReactDOMRe.Style.t,
-  pressed: ReactDOMRe.Style.t,
-};
+type markerT = {coordinates: Types.coords};
 
 [@bs.deriving abstract]
 type jsProps = {
@@ -23,14 +16,20 @@ type jsProps = {
 
 let make =
     (
-      ~marker,
+      ~coordinates: Types.coords,
       ~tabable=true,
-      ~style=Types.style(),
+      ~style: Types.style=Types.style(),
       ~preserveMarkerAspect=true,
       children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=markerClass,
-    ~props=jsProps(~marker, ~tabable, ~style, ~preserveMarkerAspect),
+    ~props=
+      jsProps(
+        ~marker=markerT(~coordinates),
+        ~tabable,
+        ~style,
+        ~preserveMarkerAspect,
+      ),
     children,
   );

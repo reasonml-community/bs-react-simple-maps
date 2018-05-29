@@ -7,3 +7,5 @@ type style = {
   [@bs.optional]
   pressed: ReactDOMRe.Style.t,
 };
+
+type coords = (float, float);

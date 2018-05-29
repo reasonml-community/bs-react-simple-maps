@@ -7,13 +7,6 @@ external geographyClass : ReasonReact.reactClass = "Geography";
 type geographyT = {id: string};
 
 [@bs.deriving abstract]
-type styleT = {
-  default: ReactDOMRe.Style.t,
-  hover: ReactDOMRe.Style.t,
-  pressed: ReactDOMRe.Style.t,
-};
-
-[@bs.deriving abstract]
 type jsProps = {
   cacheId: Js.undefined(int),
   precision: float,
@@ -21,7 +14,7 @@ type jsProps = {
   geography: Js.undefined(geographyT),
   tabable: Js.undefined(bool),
   projection: projectionT,
-  style: Js.undefined(styleT),
+  style: Types.style,
 };
 
 let fromOption = Js.Undefined.fromOption;
@@ -34,7 +27,7 @@ let make =
       ~geography=?,
       ~projection,
       ~tabable=?,
-      ~style=?,
+      ~style: Types.style=Types.style(),
       children,
     ) =>
   ReasonReact.wrapJsForReason(
@@ -47,7 +40,7 @@ let make =
         ~geography=fromOption(geography),
         ~projection,
         ~tabable=fromOption(tabable),
-        ~style=fromOption(style),
+        ~style,
       ),
     children,
   );

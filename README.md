@@ -23,6 +23,7 @@ npm run examples
 
 The API follows [react-simple-maps](https://github.com/zcreativelabs/react-simple-maps) rather closely, with a few exceptions:
 
+* `Marker` takes a prop `coordinates` instead of a nested `{marker: {coordinates}}` object.
 * `Line` takes props `start and `stop` instead of a nested `{line: {coordinates: {start, end}}}` object.
 
 ## Development

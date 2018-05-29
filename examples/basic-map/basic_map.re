@@ -9,7 +9,7 @@ ReactDOMRe.renderToElementWithId(
     )
     width=980
     height=551>
-    <ZoomableGroup center=(0, 20) disablePanning=true>
+    <ZoomableGroup center=(0, 20) disablePanning=false>
       <Geographies geography="/examples/world-50m.json">
         (
           (geographies, projection) =>
@@ -21,7 +21,7 @@ ReactDOMRe.renderToElementWithId(
                     geography
                     projection
                     style=(
-                      Geography.styleT(
+                      Types.style(
                         ~default=
                           ReactDOMRe.Style.make(
                             ~fill="#ECEFF1",
@@ -46,6 +46,7 @@ ReactDOMRe.renderToElementWithId(
                             ~outline="none",
                             (),
                           ),
+                        (),
                       )
                     )
                   /> :
