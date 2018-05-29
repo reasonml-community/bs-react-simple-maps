@@ -6,7 +6,7 @@
     "jest": "jest",
     "test": "bsb -make-world && jest",
     "start": "bsb -make-world -w",
-    "examples:start": "serve",
+    "examples": "serve",
     "clean": "bsb -clean-world && rm -f finalOutput/*.js"
   },
   "keywords": [
