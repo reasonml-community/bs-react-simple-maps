@@ -1,4 +1,6 @@
-# bs-simple-react-maps – [BuckleScript](https://github.com/bucklescript/bucklescript) bindings for [react-simple-maps](https://github.com/zcreativelabs/react-simple-maps)
+# bs-react-simple-maps
+
+[BuckleScript](https://github.com/bucklescript/bucklescript) bindings for [react-simple-maps](https://github.com/zcreativelabs/react-simple-maps)
 
 ## Installation
 
