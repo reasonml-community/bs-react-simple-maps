@@ -16,7 +16,7 @@
     "mapping"
   ],
   "author": "Jan Poeschko <jan@poeschko.com>",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/reasonml-community/bs-react-simple-maps.git"
