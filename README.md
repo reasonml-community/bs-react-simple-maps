@@ -14,10 +14,10 @@ In your `bsconfig.json`, include `"bs-react-simple-maps"` in the `bs-dependencie
 
 ```reason
 <ComposableMap
-  projectionConfig=(ComposableMap.projectionConfigT(~scale=200, ()))
+  projectionConfig=(ComposableMap.projectionConfig(~scale=200, ()))
   width=1000
   height=600>
-  <ZoomableGroup center=(0, 0)>
+  <ZoomableGroup center=(0., 0.)>
     <Geographies geography="/examples/world-50m.json">
       (
         (geographies, projection) =>
