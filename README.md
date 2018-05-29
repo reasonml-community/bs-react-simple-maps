@@ -10,6 +10,38 @@ In your `bsconfig.json`, include `"bs-react-simple-maps"` in the `bs-dependencie
 
 ## Examples
 
+```reason
+<ComposableMap
+  projectionConfig=(ComposableMap.projectionConfigT(~scale=200, ()))
+  width=1000
+  height=600>
+  <ZoomableGroup center=(0, 0)>
+    <Geographies geography="/examples/world-50m.json">
+      (
+        (geographies, projection) =>
+          Array.map(
+            geography =>
+              <Geography
+                key=(Geography.id(geography))
+                geography
+                projection
+                style=(
+                  Types.style(
+                    ~default=ReactDOMRe.Style.make(~fill="#ECEFF1", ()),
+                    (),
+                  )
+                )
+              />,
+            geographies,
+          )
+      )
+    </Geographies>
+  </ZoomableGroup>
+</ComposableMap>
+```
+
+To run other examples:
+
 ```sh
 npm run start
 # and in a separate tab
@@ -17,14 +49,15 @@ npm run examples
 # then open localhost:3000
 ```
 
-* [Basic](./examples/basic/basic.re)
+* [Basic map](./examples/basic-map/basic_map.re)
+* [Simple markers](./examples/simple-markers/simple_markers.re)
 
 ## Usage
 
 The API follows [react-simple-maps](https://github.com/zcreativelabs/react-simple-maps) rather closely, with a few exceptions:
 
 * `Marker` takes a prop `coordinates` instead of a nested `{marker: {coordinates}}` object.
-* `Line` takes props `start and `stop` instead of a nested `{line: {coordinates: {start, end}}}` object.
+* `Line` takes props `start` and `stop` instead of a nested `{line: {coordinates: {start, end}}}` object.
 
 ## Development
 
